@@ -628,7 +628,7 @@ export default function Photobooth() {
                   : stripDataUrl
                     ? (
                       <div style={{position:"relative",display:"inline-block"}}>
-                        <img src={stripDataUrl} style={S.stripImg} alt="Your photo strip output"/>
+                        <img src={stripDataUrl} style={S.stripImg} alt="Your generated strip"/>
                         {/* Draggable sticker overlays */}
                         {activeStickers.map(s => (
                           <span key={s.id}
