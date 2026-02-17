@@ -190,7 +190,7 @@ export default function Photobooth() {
   // ── Build Strip ───────────────────────────────────────────────────────────────
   useEffect(() => {
     if (phase === "strip" && photos.length > 0) buildStrip();
-  }, [phase, photos, stripDesign, stripLayout, activeStickers, stripOverlayText]);
+  }, [phase, photos, stripDesign, stripLayout, activeStickers, stripOverlayText]); // eslint-disable-line react-hooks/exhaustive-deps
 
   async function buildStrip() {
     setIsBuilding(true);
@@ -628,7 +628,7 @@ export default function Photobooth() {
                   : stripDataUrl
                     ? (
                       <div style={{position:"relative",display:"inline-block"}}>
-                        <img src={stripDataUrl} style={S.stripImg} alt="Photo strip"/>
+                        <img src={stripDataUrl} style={S.stripImg} alt="Your photo strip output"/>
                         {/* Draggable sticker overlays */}
                         {activeStickers.map(s => (
                           <span key={s.id}
